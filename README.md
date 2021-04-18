@@ -29,9 +29,40 @@ The dataset is provided by IBM, as part of the Data Science Professional Certifi
 * Due date: Since it's one time payoff schedule, each loan has one single due date
 * Age: age of applicant
 * Education: Education of applicant (High School or below, Bachelor, College, Master or above)
+* Gender: Gender of applicant
 
 ## Exploratory Data Analysis <a id="3"></a>
+After converting effective date in the weekday clients receive the loan:
 
+<p align="center">
+     <img src="https://user-images.githubusercontent.com/78954578/115154619-23168780-a07c-11eb-9e49-353191d79e4e.jpg" width="400" height="400">
+     </p>
+It seems that receiving the loan during to weekend is associated with the loan status, since most of the loans go in collection if obtained on Saturday or Sunday. I then create a new variable, "weekend", which is a dummy variable.
+
+### Data Visualization
+* Numerical variables
+   * Histograms 
+     <p align="center">
+     <img src="https://user-images.githubusercontent.com/78954578/115154863-50176a00-a07d-11eb-8a60-8317e78e4eb5.jpg" width="720" height="280">
+     </p>
+     <em>Principal</em> distribution is highly concentrated on the 1000 value, while <em>age</em> could be distributed as a normal (slightly positive skewed) and <em>dayofweek</em> shows a bimodal distribution
+
+   * Box plots
+     <p align="center">
+     <img src="https://user-images.githubusercontent.com/78954578/115155049-565a1600-a07e-11eb-84ff-e4cc481c75e0.jpg" width="720" height="280">
+     </p>
+     The outliers in the <em>Principal</em> and age distributions can visualize even better.
+   
+   * Correlation matrix
+
+* Categorical Variable
+
+|  | |
+:-------------------------:|:-------------------------:
+![terms barplot](https://user-images.githubusercontent.com/78954578/115155189-134c7280-a07f-11eb-911e-4dee6e061558.jpg) | ![education barplot](https://user-images.githubusercontent.com/78954578/115155251-4f7fd300-a07f-11eb-843c-8d7d73c823d4.jpg)
+![gender barplot](https://user-images.githubusercontent.com/78954578/115155256-5a3a6800-a07f-11eb-86a5-ab3b1a2cd61f.jpg)  | ![weekend barplot](https://user-images.githubusercontent.com/78954578/115155375-febcaa00-a07f-11eb-9c00-ce82ad92a32f.jpg)
+
+                          
 ## Methodology <a id="4"></a>
 
 ## Results <a id="5"></a>
