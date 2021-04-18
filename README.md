@@ -1,7 +1,40 @@
-# Classification-Project-Loan-Status-Prediction
+# Classification Project: Loan Status Prediction
+
+## Overview
+* Applied the major Classification models to identify whether a loan is paid off or goes in collection 
+* Achieved an out-of-sample Accuracy of 78% with Support Vector Machine Classifier
 
 
+## Table of Contents
+<div >
 
+1.  [Introduction](#1)<br>
+2.  [Data](#2) <br>
+3.  [Exploratory Data Analysis](#3) <br>
+4.  [Methodology](#4) <br>
+5.  [Results](#5) <br>
+6.  [Conclusions](#6) <br>
+    </div>
+
+## Introduction <a id="1"></a>
+In Credit Risk Modeling, supervised Machine Learning and in particular Classification algorithms have proved to be incredible tools for banks, as they have significantly improved the ability in identifing good and bad debtors. In this project I apply all of the major Classification models to predict whether a loan will be paid off or will go in collection.
+
+## Data <a id="2"></a>
+The dataset is provided by IBM, as part of the Data Science Professional Certificate. The dataset is already splitted into train and validation set; the train set is splitted again during the analysis to set the optimal parameters through Cross-validation. The train set consists of 346 observations (the customers) and eight varibles, the first of which will be the target variable, while the test set contains 54 observations. The features are:
+
+* Loan status (target variable): whether a loan is paid off or in collection
+* Principal: basic principal loan amount in dollars
+* Terms: origination terms which can be weekly (7 days), biweekly (15 days) or monthly (30 days)
+* Effective date: when the loan got originated and took effect
+* Due date: Since it's one time payoff schedule, each loan has one single due date
+* Age: age of applicant
+* Education: Education of applicant (High School or below, Bachelor, College, Master or above)
+
+## Exploratory Data Analysis <a id="3"></a>
+
+## Methodology <a id="4"></a>
+
+## Results <a id="5"></a>
 ### Logistic Regression
 
 | Confusion Matrix         |  ROC Curve |
@@ -153,8 +186,10 @@
 
 ### ROC Curve Comparison
 
-![roc comparison](https://user-images.githubusercontent.com/78954578/115143815-c8fcce80-a049-11eb-96d3-ed34c39db710.jpg)
 
+<p align="center">
+     <img src="https://user-images.githubusercontent.com/78954578/115143815-c8fcce80-a049-11eb-96d3-ed34c39db710.jpg" width="500" height="500">
+     </p>
 
 
 ### Feature Importance
@@ -176,7 +211,7 @@ Highlithing the importance of the features used, in terms of coefficients value 
 * Decision Tree, Random Forest and Gradient Boosting also identify age as a key feature; however, as well there doesn't seem to be a relationship between the loan status and the age of clients, I'd take this insight as a simple statistical association.
 
 
-
+## Conclusions <a id="6"></a>
 
 
 
