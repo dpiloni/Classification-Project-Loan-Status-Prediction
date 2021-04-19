@@ -2,7 +2,7 @@
 
 ## Overview
 * Applied the major Classification models to identify whether a loan is paid off or goes in collection 
-* Achieved an out-of-sample Accuracy of 78% with Support Vector Machine Classifier
+* Achieved an out-of-sample Accuracy of 79% with Support Vector Machine Classifier
 
 
 ## Table of Contents
@@ -35,7 +35,7 @@ The dataset is provided by IBM, as part of the Data Science Professional Certifi
 After converting effective date in the weekday clients receive the loan:
 
 <p align="center">
-     <img src="https://user-images.githubusercontent.com/78954578/115154619-23168780-a07c-11eb-9e49-353191d79e4e.jpg" width="400" height="400">
+     <img src="https://user-images.githubusercontent.com/78954578/115154619-23168780-a07c-11eb-9e49-353191d79e4e.jpg" width="380" height="380">
      </p>
 It seems that receiving the loan during to weekend is associated with the loan status, since most of the loans go in collection if obtained on Saturday or Sunday. I then create a new variable, "weekend", which is a dummy variable.
 
@@ -51,9 +51,14 @@ It seems that receiving the loan during to weekend is associated with the loan s
      <p align="center">
      <img src="https://user-images.githubusercontent.com/78954578/115155049-565a1600-a07e-11eb-84ff-e4cc481c75e0.jpg" width="720" height="280">
      </p>
-     The outliers in the <em>Principal</em> and age distributions can visualize even better.
+     The outliers in the <em>Principal</em> and age distributions can be better visualized.
    
    * Correlation matrix
+     <p align="center">
+     <img src="https://user-images.githubusercontent.com/78954578/115186425-fac17400-a0e1-11eb-9305-dead06d51c0c.jpg" width="350" height="350">
+     </p>
+     Numerical featurea are very low correlated
+
 
 * Categorical Variable
 
@@ -62,8 +67,37 @@ It seems that receiving the loan during to weekend is associated with the loan s
 ![terms barplot](https://user-images.githubusercontent.com/78954578/115155189-134c7280-a07f-11eb-911e-4dee6e061558.jpg) | ![education barplot](https://user-images.githubusercontent.com/78954578/115155251-4f7fd300-a07f-11eb-843c-8d7d73c823d4.jpg)
 ![gender barplot](https://user-images.githubusercontent.com/78954578/115155256-5a3a6800-a07f-11eb-86a5-ab3b1a2cd61f.jpg)  | ![weekend barplot](https://user-images.githubusercontent.com/78954578/115155375-febcaa00-a07f-11eb-9c00-ce82ad92a32f.jpg)
 
-                          
+Modes in the dataset are respectively: monthly term, high school and college as level of education, male and weekend as days in which applicants obtain the loan
+
+* Target variable
+<p align="center">
+     <img src="https://user-images.githubusercontent.com/78954578/115187277-504a5080-a0e3-11eb-8b19-f45ecb919225.jpg" width="350" height="350">
+     </p>
+As usual in Credit Risk modeling, positive cases are significantly higher than negative ones
+
 ## Methodology <a id="4"></a>
+
+I fit to the data all of the major Classifiers:
+
+*	Logistic regression
+*	Naive Bayes 
+*	K Nearest Neighbrs
+*	Support Vector Machine
+*	Decision Tree
+*	Random Forest
+*	Gradient Boosting
+*	XGBoost
+
+For all the algorithms above, I evaluate the performance out-of-sample with both confusion matrix and ROC curve measuring:
+
+*	Accuracy
+*	Sensitivity (Recall)
+*	Specificity
+*	Precision
+*	F1 Score
+*	AUC
+
+Finally, I inspect feature importances with the models from which can be extracted insights, i.e. Logistic Regression, Decision Tree and Ensemble Methods.
 
 ## Results <a id="5"></a>
 ### Logistic Regression
@@ -243,6 +277,9 @@ Highlithing the importance of the features used, in terms of coefficients value 
 
 
 ## Conclusions <a id="6"></a>
+*	Achieved an Accuracy of 79% with Support Vector Machine Classifier
+*	Models from which we could obtain insights confirm that weekend is a key feature, at least in this dataset, to classify good and bad loans, as highlightted in the EDA
+*	Models in general are not efficient in predicting negatives: the highest Specificity is achieved by Naive Bayes Classifier, but the cost is the lowest Accuracy of all modes; for the other ones, Specificity highest score is 50%
 
 
 
