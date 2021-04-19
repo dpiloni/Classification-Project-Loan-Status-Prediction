@@ -60,7 +60,7 @@ It seems that receiving the loan during to weekend is associated with the loan s
      Numerical featurea are very low correlated
 
 
-* Categorical Variable
+* Categorical Variables
 
 |  | |
 :-------------------------:|:-------------------------:
