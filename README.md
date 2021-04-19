@@ -73,7 +73,11 @@ Modes in the dataset are respectively: monthly term, high school and college as 
 <p align="center">
      <img src="https://user-images.githubusercontent.com/78954578/115187277-504a5080-a0e3-11eb-8b19-f45ecb919225.jpg" width="350" height="350">
      </p>
-As usual in Credit Risk modeling, positive cases are significantly higher than negative ones
+As usual in Credit Risk modeling, positive cases are significantly higher than negative ones.
+
+### Feature Engineering
+
+To prepare data the modeling phase, I first convert categorical variables into numerical values; then, using one hot encoding they are transformed into dummy variables. Finally, in order to reduce distortions caused by variables with different scales, features are standardized.
 
 ## Methodology <a id="4"></a>
 
