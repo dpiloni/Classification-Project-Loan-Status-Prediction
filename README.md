@@ -281,8 +281,8 @@ Highlithing the importance of the features used, in terms of coefficients value 
 
 
 ## Conclusions <a id="6"></a>
-*	Achieved an Accuracy of 79% with Support Vector Machine Classifier
-*	Models from which we could obtain insights confirm that weekend is a key feature, at least in this dataset, to classify good and bad loans, as highlightted in the EDA
+*	Achieved an out-of-sample Accuracy of 79% with Support Vector Machine Classifier
+*	Models from which we could obtain insights confirm that weekend is a key feature, at least in this dataset, to classify good and bad loans, as highlighted in the EDA
 *	Models in general are not efficient in predicting negatives: the highest Specificity is achieved by Naive Bayes Classifier, but the cost is the lowest Accuracy of all modes; for the other ones, Specificity highest score is 50%
 
 
